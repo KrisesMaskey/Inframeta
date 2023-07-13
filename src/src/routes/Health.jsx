@@ -1,8 +1,12 @@
 import React from 'react'
+import TCHealthBox from '../components/utils/TCHealthBox'
 
 function Health() {
   return (
-    <div>Health</div>
+    <div>
+      <TCHealthBox/>
+      <TCHealthBox/>
+    </div>
   )
 }
 
