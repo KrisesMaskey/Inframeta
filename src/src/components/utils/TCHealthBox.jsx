@@ -2,17 +2,56 @@ import React from 'react'
 import styles from './TCHealthBox.module.css'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+//import jsonData from './data.json';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
+const data1 = {
+  "TC01": [{
+      "https://sambciukprodrcmpri:48083/RCM/acegi/acegilogin.jsp": {
+          "App_name": "SAMB_UK(BCI)",
+          "App_status": "up",
+          "Timestamp": "2023-07-13T10:38:19.427362"
+      },
+      "https://isammexprodrcm:38083/RCM/acegi/acegilogin.jsp": {
+          "App_name": "SAMB_MEXICO",
+          "App_status": "up",
+          "Timestamp": "2023-07-13T10:38:19.546069"
+      },
+      "https://isammexprodwip.barcapint.com/RCM/acegi/acegilogin.jsp": {
+          "App_name": "SAMB_US_LB",
+          "App_status": "up",
+          "Timestamp": "2023-07-13T10:38:19.546069"
+      },
+      
+      "https://isammexprodwi3p.barcapint.com/RCM/acegi/acegilogin.jsp": {
+          "App_name": "SAMB_US",
+          "App_status": "down",
+          "Timestamp": "2023-07-13T10:38:19.546069"
+      }
+  }]
 
+};
+//const data1 = JSON.parse(json_data);
+const upApps = [];
+const downApps = [];
+
+for (const app of data1.TC01) {
+  for (const url in app) {
+    const details = app[url];
+    if (details.App_status === 'up') {
+      upApps.push(details.App_name);
+    } else if (details.App_status === 'down') {
+      downApps.push(details.App_name);
+    }
+  }
+}
 var data = {
   labels: [
     'Down',
     'Up'
   ],
   datasets: [{
-    label: 'My First Dataset',
-    data: [30, 500],
+    data: [downApps.length, upApps.length],
     backgroundColor: [
       'rgba(255, 99, 132, 0.2)',
       'rgba(54, 162, 235, 0.2)',
