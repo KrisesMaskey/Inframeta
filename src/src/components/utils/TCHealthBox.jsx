@@ -7,8 +7,8 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 var data = {
   labels: [
-    'Red',
-    'Green'
+    'Down',
+    'Up'
   ],
   datasets: [{
     label: 'My First Dataset',
@@ -49,7 +49,7 @@ function TCHealthBox() {
     <><div className={styles.healthContainer}></div><div>
       <Doughnut
         data={data}
-        height={100}
+        height={200}
         options={options} />
     </div></>
   )
