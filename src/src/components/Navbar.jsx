@@ -2,8 +2,9 @@ import React from 'react'
 import styles from './Navbar.module.css'
 
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import CircleIcon from '@mui/icons-material/Circle';
+import { red } from '@mui/material/colors';
 
 function Navbar() {
   return (
@@ -16,10 +17,13 @@ function Navbar() {
         </div>
         <div className={styles.items}>
           <div className={styles.item}>
-            <DarkModeOutlinedIcon />
+            <div className={styles.clickable}>
+              <DarkModeIcon style={{color: 'grey'}} />
+            </div>
           </div>
           <div className={styles.item}>
-            <CircleOutlinedIcon />
+            <CircleIcon style={{fontSize: '16px', color: 'Green'}}/>
+            <p>&ensp;Overall Health</p>
           </div>
         </div>
       </div>
