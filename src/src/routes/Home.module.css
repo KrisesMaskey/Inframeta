@@ -9,3 +9,12 @@
     background-color: #efefef;
     flex: 10;
 }
+
+.chartContainer{
+    display: grid;
+    grid-auto-columns: minmax(30rem, auto);
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-gap: 2rem;
+    overflow:auto;
+    height: calc(100vh - 10rem);
+}

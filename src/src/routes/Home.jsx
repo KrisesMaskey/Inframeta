@@ -11,7 +11,13 @@ function Home() {
 
         <div className={styles.homeContainer}>
           <Navbar/>
-          
+          <div className={styles.chartContainer}>
+            <TCHealthBox name={'TC - 1'}/>
+            <TCHealthBox name={'TC - 2'}/>
+            <TCHealthBox name={'TC - 3'}/>
+            <TCHealthBox name={'TC - 4'}/>
+            
+          </div>
         </div>
     </div>
   )

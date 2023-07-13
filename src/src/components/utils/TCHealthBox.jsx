@@ -35,6 +35,7 @@ var data = {
 
 var options = {
   maintainAspectRatio: false,
+  responsive: false,
   scales: {
   },
   legend: {
@@ -44,14 +45,19 @@ var options = {
   },
 }
 
-function TCHealthBox() {
+function TCHealthBox(props) {
   return (
-    <><div className={styles.healthContainer}></div><div>
-      <Doughnut
-        data={data}
-        height={200}
-        options={options} />
-    </div></>
+    <div className={styles.healthContainer}>
+      <div className="name">
+        {props.name}
+      </div>
+      <div className={styles.chart}>
+        <Doughnut
+          data={data}
+          height={200}
+          options={options} />
+      </div>
+    </div>
   )
 }
 
