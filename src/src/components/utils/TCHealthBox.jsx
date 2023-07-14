@@ -5,32 +5,8 @@ import { Doughnut } from 'react-chartjs-2';
 import { useNavigate } from "react-router-dom";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
-const data1 = {
-  "TC01": [{
-      "https://sambciukprodrcmpri:48083/RCM/acegi/acegilogin.jsp": {
-          "App_name": "SAMB_UK(BCI)",
-          "App_status": "up",
-          "Timestamp": "2023-07-13T10:38:19.427362"
-      },
-      "https://isammexprodrcm:38083/RCM/acegi/acegilogin.jsp": {
-          "App_name": "SAMB_MEXICO",
-          "App_status": "up",
-          "Timestamp": "2023-07-13T10:38:19.546069"
-      },
-      "https://isammexprodwip.barcapint.com/RCM/acegi/acegilogin.jsp": {
-          "App_name": "SAMB_US_LB",
-          "App_status": "up",
-          "Timestamp": "2023-07-13T10:38:19.546069"
-      },
-      
-      "https://isammexprodwi3p.barcapint.com/RCM/acegi/acegilogin.jsp": {
-          "App_name": "SAMB_US",
-          "App_status": "down",
-          "Timestamp": "2023-07-13T10:38:19.546069"
-      }
-  }]
+const data1 = require('./data.json');
 
-};
 //const data1 = JSON.parse(json_data);
 const upApps = [];
 const downApps = [];
