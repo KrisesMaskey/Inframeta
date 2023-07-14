@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Apptable.module.css'
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
 import LinkIcon from '@mui/icons-material/Link';
+import CancelIcon from '@mui/icons-material/Cancel';
 
 function randTime(){
   let formattedTimestamp = ("0" + Math.floor(Math.random() * 24)).slice(-2) + ":" + 
@@ -43,7 +44,7 @@ function Apptable() {
             </tr>
             <tr>
               <td>SAM8_US_LB</td>
-              <td><TaskAltIcon style={{color: 'green'}}/></td>
+              <td><CancelIcon style={{color: 'red'}}/></td>
               <td>{randTime()}</td>
               <td><LinkIcon style={{color: 'blue'}}/></td>
             </tr>

@@ -12,11 +12,10 @@ function Applications() {
       <div className={styles.homeContainer}>
         <div className={styles.tabBar}>
           <div className={styles.tabs}>
-            <span>Application Monitoring</span>
-            <div className={styles.active} style={{height: '30px' , width: '100px', backgroundColor: '#98FB98', borderRadius: '10px'}}>
-              <span>Server Health</span>
+            <div className={styles.active} style={{height: '30px' , width: '170px', backgroundColor: '#98FB98', borderRadius: '10px'}}>
+              <span>Application Monitoring</span>
             </div>
-            
+            <span>Server Health</span>
             <span>Incident Management</span>
             <span>Team Health</span>
           </div>
