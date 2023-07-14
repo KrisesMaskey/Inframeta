@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <div className={styles.navbar}>
       <div className={styles.wrapper} >
-        <div className={styles.search}>
+        <div className={styles.search}> 
 
           <input type="text" placeholder="Search..." />
           <SearchOutlinedIcon />

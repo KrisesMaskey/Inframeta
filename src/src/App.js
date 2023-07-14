@@ -6,12 +6,20 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Health from './routes/Health';
 import Applications from './routes/Applications';
+import Leftbar from './components/Leftbar';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      
+        
+        {/* <div className='home'>
+          <Leftbar/>  
+          <div className='homeContainer'>
+            <Navbar/>
+          </div>
+        </div> */}
+
         <Routes>
           <Route path='/' element={<Home />}></Route>
         </Routes>

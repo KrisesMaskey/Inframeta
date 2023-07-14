@@ -9,6 +9,11 @@
         text-align: left;
 }
 
+.healthContainer:hover{
+    background-color: #f1e9f7;
+    cursor: pointer;
+}
+
 .chart{
     width: 100%;
     display:flex;

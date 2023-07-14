@@ -9,3 +9,15 @@
   background-color: #efefef;
   height: 100vh;
 }
+
+.home{
+  display: flex;
+  height: 100%;
+
+}
+
+.homeContainer{
+  width: 100%;
+  background-color: #efefef;
+  flex: 10;
+}
